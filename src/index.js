@@ -10,6 +10,7 @@ lagostime.innerHTML = lagosmoment.tz("Africa/Lagos").format("h:mm:ss [<small>]A[
 }
 
 displaylagos()
+setInterval(displaylagos,1000)
 
 
 function displaybloem(){
@@ -23,19 +24,31 @@ bloemtime.innerHTML = bloemmoment.tz("Africa/Bloemfontein").format("h:mm:ss [<sm
 
 }
 
-displaybloem()
+setInterval(displaybloem,1000)
 
+// City update
 
-function displaymiami(){
-  let miamielem = document.getElementById("miami");
-let miamielemcontainer = document.getElementById("miamicon")
-let miamidate = miamielemcontainer.querySelector(".date")
-let miamitime = miamielemcontainer.querySelector(".time")
-miamimoment = moment();
-miamidate.innerHTML = miamimoment.format("MMMM Do, YYYY")
-miamitime.innerHTML = miamimoment.tz("America/New_York").format("h:mm:ss [<small>]A[</small>]")
+function updateCity(event){
+  let cityTimeZone = event.target.value
+  console.log(cityTimeZone)
+  let cityTime = moment().tz(cityTimeZone)
+  let citiesElement = document.getElementById("cities")
+  let cityName = cityTimeZone.split("/")[1];
+
+  citiesElement.innerHTML = 
+  `<div class="cities">
+        <div  class="lagos-container">
+          <div class="city" id="lagos"><h2>${cityName}</h2></div>
+        <div class="date">${cityTime.format("MMMM Do, YYYY")}</div>
+        <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
+
+      </div>
+
+      </div>
+
+  `
 
 }
 
-displaymiami()
-
+let citiesSelectElem = document.getElementById("select");
+citiesSelectElem.addEventListener("change",updateCity)

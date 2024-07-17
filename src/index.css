@@ -54,12 +54,12 @@ form{
 }
 
 select{
-  width:200px;
+  width:600px;
   margin-bottom: 20px;
-  padding:6px 2px;
+  padding:12px 2px;
 }
 
-.general{
+.cities{
   color: aliceblue;
     margin-bottom: 30px;
     background-color: #07004D;
