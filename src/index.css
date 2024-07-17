@@ -38,7 +38,8 @@ h2{
   display: flex;
     margin: 10px 0;
     justify-content: end;
-  font-size: 30px;
+  font-size: 50px;
+  transform: translateY(60px);
 }
 
 footer{
@@ -60,8 +61,6 @@ select{
 
 .general{
   color: aliceblue;
-    /* display: grid;
-    place-items: center; */
     margin-bottom: 30px;
     background-color: #07004D;
     width: 800px;
@@ -70,9 +69,6 @@ select{
 
 .date,.time{
   color: aliceblue;
-  /* display: flex;
-  justify-content: end; */
-  /* align-items: end; */
   margin-bottom: 30px;
   margin-left: 30px;
   
