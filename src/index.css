@@ -1,8 +1,101 @@
+.arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arvo-bold {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arvo-regular-italic {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arvo-bold-italic {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+body{
+  background-color: #011627;
+}
+
 h1{
   text-align: center;
   color:blue;
+  color:aliceblue;
+  font-size: 50px;
+  font-family: "Arvo";
+}
+
+h2{
+  display: flex;
+    margin: 10px 0;
+    justify-content: end;
+  font-size: 30px;
 }
 
 footer{
   text-align: center;
+  color:aliceblue;
 }
+
+form{
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+
+select{
+  width:200px;
+  margin-bottom: 20px;
+  padding:6px 2px;
+}
+
+.general{
+  color: aliceblue;
+    /* display: grid;
+    place-items: center; */
+    margin-bottom: 30px;
+    background-color: #07004D;
+    width: 800px;
+    border-radius: 30px;
+}
+
+.date,.time{
+  color: aliceblue;
+  /* display: flex;
+  justify-content: end; */
+  /* align-items: end; */
+  margin-bottom: 30px;
+  margin-left: 30px;
+  
+}
+
+.date{
+  font-size: 20px;
+}
+
+.time{
+  font-size: 50px;
+}
+
+.city{
+  color: aliceblue;
+  margin-right: 30px;
+  font-size:90px;
+
+}
+
+
+
+
+/* .time{
+  display:block;
+} */
